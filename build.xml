@@ -177,7 +177,10 @@
   
   <property name="javatestowanie.output.dir" value="${module.javatestowanie.basedir}/target/classes"/>
   <property name="javatestowanie.testoutput.dir" value="${module.javatestowanie.basedir}/target/test-classes"/>
-  
+  <path id="classpath.test">
+    <pathelement location="lib/junit-4.12.jar" />
+    <pathelement location="lib/hamcrest-core-1.3.jar" />
+  </path>
   <path id="javatestowanie.module.bootclasspath">
     <!-- Paths to be included in compilation bootclasspath -->
   </path>
