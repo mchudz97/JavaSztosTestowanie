@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_javatestowanie" default="compile.module.javatestowanie">
+  <dirname property="module.javatestowanie.basedir" file="${ant.file.module_javatestowanie}"/>
+  
+  <property name="module.jdk.home.javatestowanie" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.javatestowanie" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.javatestowanie" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.javatestowanie" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="javatestowanie.output.dir" value="${module.javatestowanie.basedir}/target/classes"/>
+  <property name="javatestowanie.testoutput.dir" value="${module.javatestowanie.basedir}/target/test-classes"/>
+  
+  <path id="javatestowanie.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="javatestowanie.module.production.classpath">
+    <path refid="${module.jdk.classpath.javatestowanie}"/>
+  </path>
+  
+  <path id="javatestowanie.runtime.production.module.classpath">
+    <pathelement location="${javatestowanie.output.dir}"/>
+  </path>
+  
+  <path id="javatestowanie.module.classpath">
+    <path refid="${module.jdk.classpath.javatestowanie}"/>
+    <pathelement location="${javatestowanie.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="javatestowanie.runtime.module.classpath">
+    <pathelement location="${javatestowanie.testoutput.dir}"/>
+    <pathelement location="${javatestowanie.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.javatestowanie">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.javatestowanie">
+    <patternset refid="excluded.from.module.javatestowanie"/>
+  </patternset>
+  
+  <path id="javatestowanie.module.sourcepath">
+    <dirset dir="${module.javatestowanie.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="javatestowanie.module.test.sourcepath">
+    <dirset dir="${module.javatestowanie.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.javatestowanie" depends="compile.module.javatestowanie.production,compile.module.javatestowanie.tests" description="Compile module JavaTestowanie"/>
+  
+  <target name="compile.module.javatestowanie.production" depends="register.custom.compilers" description="Compile module JavaTestowanie; production classes">
+    <mkdir dir="${javatestowanie.output.dir}"/>
+    <javac2 destdir="${javatestowanie.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.javatestowanie}/javac">
+      <compilerarg line="${compiler.args.javatestowanie}"/>
+      <bootclasspath refid="javatestowanie.module.bootclasspath"/>
+      <classpath refid="javatestowanie.module.production.classpath"/>
+      <src refid="javatestowanie.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.javatestowanie"/>
+    </javac2>
+    
+    <copy todir="${javatestowanie.output.dir}">
+      <fileset dir="${module.javatestowanie.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.javatestowanie.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.javatestowanie.tests" depends="register.custom.compilers,compile.module.javatestowanie.production" description="compile module JavaTestowanie; test classes" unless="skip.tests">
+    <mkdir dir="${javatestowanie.testoutput.dir}"/>
+    <javac2 destdir="${javatestowanie.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.javatestowanie}/javac">
+      <compilerarg line="${compiler.args.javatestowanie}"/>
+      <bootclasspath refid="javatestowanie.module.bootclasspath"/>
+      <classpath refid="javatestowanie.module.classpath"/>
+      <src refid="javatestowanie.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.javatestowanie"/>
+    </javac2>
+    
+    <copy todir="${javatestowanie.testoutput.dir}">
+      <fileset dir="${module.javatestowanie.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.javatestowanie" description="cleanup module">
+    <delete dir="${javatestowanie.output.dir}"/>
+    <delete dir="${javatestowanie.testoutput.dir}"/>
+  </target>
+</project>
