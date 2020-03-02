@@ -1,86 +1,47 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class RomanNumeral {
     private int num;
-
+    private Map<Integer, String> Roman;
     public RomanNumeral(int num){
+    
         this.num = num;
+    
+        Roman = new HashMap<Integer, String>();
+    
+        Roman.put(1000, "M");
+        Roman.put(900, "CM");
+        Roman.put(500, "D");
+        Roman.put(400, "CD");
+        Roman.put(100, "C");
+        Roman.put(90, "XC");
+        Roman.put(50, "L");
+        Roman.put(40, "XL");
+        Roman.put(10, "X");
+        Roman.put(9, "IX");
+        Roman.put(5, "V");
+        Roman.put(4, "IV");
+        Roman.put(1, "I");
+    
     }
+    
     public String getRomanNumeral(){
         int val = num;
-        return romanCalc(val);
-    }
-    private String romanCalc(int num){
         String romanVal = "";
-        while(num != 0){
-
-            if(num >= 1000){
-                romanVal += "M";
-                num -= 1000;
+        for (Map.Entry<Integer, String> entry: Roman.entrySet()) {
+            while (val >= entry.getKey()){
+                romanVal += entry.getValue();
+                val -= entry.getKey();
             }
 
-            else if(num >= 900){
-                romanVal += "CM";
-                num -= 900;
-            }
-
-            else if(num >= 500){
-                romanVal += "D";
-                num -= 500;
-            }
-
-            else if(num >= 400){
-                romanVal += "CD";
-                num -= 400;
-            }
-
-            else if(num >= 100){
-                romanVal += "C";
-                num -= 100;
-            }
-
-            else if(num >= 90){
-                romanVal += "XC";
-                num -= 90;
-            }
-
-            else if(num >= 50){
-                romanVal += "L";
-                num -= 50;
-            }
-
-            else if(num >= 40){
-                romanVal += "XL";
-                num -= 40;
-            }
-
-            else if(num >= 10){
-                romanVal += "X";
-                num -= 10;
-            }
-
-            else if(num >= 9){
-                romanVal += "IX";
-                num -= 9;
-            }
-
-            else if(num >= 5){
-                romanVal += "V";
-                num -= 5;
-            }
-
-            else if(num >=4){
-                romanVal += "IV";
-                num -= 4;
-            }
-
-            else if (num >= 1){
-                romanVal += "I";
-                num -= 1;
-            }
 
         }
-
         return romanVal;
-
+        
+        
     }
+    
+    
 
 }
