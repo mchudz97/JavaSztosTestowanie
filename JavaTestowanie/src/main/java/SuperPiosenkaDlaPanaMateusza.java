@@ -32,7 +32,7 @@ public class SuperPiosenkaDlaPanaMateusza {
 
         if(index >= verses.length) throw new IllegalArgumentException();
 
-        return verses[index] + ".";
+        return verses[index].replaceAll("\n*", "")+ ".";
     }
 
     public String getSection(int startIndex, int endIndex){
@@ -45,7 +45,16 @@ public class SuperPiosenkaDlaPanaMateusza {
         String sect = "";
 
         for(int i = startIndex; i <= endIndex; i++){
-            sect += verses[i] + ".\n";
+
+            String compressed = verses[i].replaceAll("\n+", "\n");
+            sect += compressed +".";
+
+            if(i != endIndex){
+
+                sect+="\n";
+
+            }
+
 
         }
         return sect;
