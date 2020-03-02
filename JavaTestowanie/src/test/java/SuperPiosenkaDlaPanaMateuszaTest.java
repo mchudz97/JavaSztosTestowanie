@@ -11,11 +11,18 @@ public class SuperPiosenkaDlaPanaMateuszaTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void kiedyWersPozaPrzedzialem(){
+    public void whenVerseOutOfRange(){
         assertEquals("", temp.getSingeVerse(10000));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void whenSectionOutOfRange(){
+        assertEquals("", temp.getSection(0, 10000));
+
+    }
     
+
+
 
 
 
