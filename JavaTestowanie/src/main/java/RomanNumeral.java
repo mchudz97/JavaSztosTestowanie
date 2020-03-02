@@ -4,8 +4,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class RomanNumeral {
+
     private int num;
     private TreeMap<Integer, String> Roman;
+
     public RomanNumeral(int num){
     
         this.num = num;
@@ -29,19 +31,22 @@ public class RomanNumeral {
     }
     
     public String getRomanNumeral(){
+
         int val = num;
         String romanVal = "";
+
         for (Map.Entry<Integer, String> entry: Roman.entrySet()) {
+
             while (val >= entry.getKey()){
+
                 romanVal += entry.getValue();
                 val -= entry.getKey();
+
             }
 
-
         }
+
         return romanVal;
-        
-        
     }
     
     
