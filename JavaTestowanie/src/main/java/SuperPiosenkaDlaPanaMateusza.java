@@ -25,14 +25,18 @@ public class SuperPiosenkaDlaPanaMateusza {
             "On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.";
 
     private String[] verses;
+
     public SuperPiosenkaDlaPanaMateusza(){
+
         verses = text.split("\\.");
+
     }
     public String getSingleVerse(int index){
 
         if(index >= verses.length) throw new IllegalArgumentException();
 
         return verses[index].replaceAll("\n*", "")+ ".";
+
     }
 
     public String getSection(int startIndex, int endIndex){
@@ -57,9 +61,14 @@ public class SuperPiosenkaDlaPanaMateusza {
 
 
         }
+
         return sect;
+
     }
+
     public String getFullSong(){
+
         return this.text;
+
     }
 }
