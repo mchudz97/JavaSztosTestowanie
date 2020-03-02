@@ -1,14 +1,16 @@
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class RomanNumeral {
     private int num;
-    private Map<Integer, String> Roman;
+    private TreeMap<Integer, String> Roman;
     public RomanNumeral(int num){
     
         this.num = num;
     
-        Roman = new HashMap<Integer, String>();
+        Roman = new TreeMap<Integer, String>(Collections.reverseOrder());
     
         Roman.put(1000, "M");
         Roman.put(900, "CM");
