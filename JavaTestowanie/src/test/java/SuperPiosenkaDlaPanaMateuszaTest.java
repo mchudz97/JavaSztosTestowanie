@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 public class SuperPiosenkaDlaPanaMateuszaTest {
 
-    SuperPiosenkaDLaPanaMateusza temp;
+    SuperPiosenkaDlaPanaMateusza temp;
     String piosenka;
 
     @Before
@@ -37,7 +37,7 @@ public class SuperPiosenkaDlaPanaMateuszaTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void whenVerseOutOfRange(){
-        assertEquals("", temp.getSingeVerse(10000));
+        assertEquals("", temp.getSingleVerse(10000));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -71,7 +71,7 @@ public class SuperPiosenkaDlaPanaMateuszaTest {
     }
     @Test
     public void fullSong(){
-        assertEquals(piosenka, temp.getFullSong);
+        assertEquals(piosenka, temp.getFullSong());
     }
 
 }

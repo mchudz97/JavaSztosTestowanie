@@ -37,16 +37,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.RomanNumeralsTest">
-    <configuration name="ArmstrongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaTestowanie" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ArmstrongTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SuperPiosenkaDlaPanaMateuszaTest">
     <configuration name="PangramTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaTestowanie" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,6 +65,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SuperPiosenkaDlaPanaMateuszaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaTestowanie" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SuperPiosenkaDlaPanaMateuszaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WiekTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaTestowanie" />
       <option name="PACKAGE_NAME" value="" />
@@ -85,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SuperPiosenkaDlaPanaMateuszaTest" />
         <item itemvalue="JUnit.RomanNumeralsTest" />
         <item itemvalue="JUnit.PointTest" />
         <item itemvalue="JUnit.WiekTest" />
         <item itemvalue="JUnit.PangramTest" />
-        <item itemvalue="JUnit.ArmstrongTest" />
       </list>
     </recent_temporary>
   </component>
@@ -111,22 +111,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1583133383023" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583175673203">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583180231540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583175673203" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583175673203">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1583180231540" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1583180130427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583175673203" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583175673203">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1583180130427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583175673203" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583175673203">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1583180130426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583175673203" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583180130426" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1583180130427">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583180130427">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1583180130427">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1583180130427">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1583180130427">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583180130427" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1583134762676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -142,6 +162,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTestowanie$RomanNumeralsTest.ic" NAME="RomanNumeralsTest Coverage Results" MODIFIED="1583175673157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JavaTestowanie$SuperPiosenkaDlaPanaMateuszaTest.ic" NAME="SuperPiosenkaDlaPanaMateuszaTest Coverage Results" MODIFIED="1583180130380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JavaTestowanie$PangramTest.ic" NAME="PangramTest Coverage Results" MODIFIED="1583161881451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JavaTestowanie$FizzBuzzTest.ic" NAME="FizzBuzzTest Coverage Results" MODIFIED="1583136305630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JavaTestowanie$ArmstrongTest.ic" NAME="ArmstrongTest Coverage Results" MODIFIED="1583138407924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
